@@ -1,0 +1,6 @@
+PyYAML>=6.0
+requests>=2.31
+matplotlib>=3.8
+python-dotenv>=1.2.3
+duckdb>=1.5.5
+pydantic>=2.13.5

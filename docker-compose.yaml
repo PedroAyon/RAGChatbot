@@ -1,0 +1,16 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      CONFIG_PATH: /app/config/config.yaml
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./config:/app/config:ro
+      - ./data:/app/data:ro
+      - bot_output:/app/output
+
+volumes:
+  bot_output:

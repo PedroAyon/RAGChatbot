@@ -1,0 +1,12 @@
+messaging_agent:
+  csv_output_dir: /app/output/csv
+  chart_output_dir: /app/output/charts
+  db_config_path: /app/config/data_sources.json
+  llm:
+    type: ollama
+    model: gemma4:26b
+    base_url: ${OLLAMA_BASE_URL}
+
+messaging_service:
+  type: telegram
+  token: ${TELEGRAM_BOT_TOKEN}

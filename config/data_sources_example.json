@@ -1,0 +1,28 @@
+{
+  "data_sources": {
+    "clinical": {
+      "type": "csv",
+      "csv_path": "/app/data/clinical/clinical_data.csv",
+      "overview_path": "/app/data/clinical/overview.txt",
+      "specification_path": "/app/data/clinical/specs.yaml",
+      "llm": {
+        "type": "ollama",
+        "model": "gemma4:26b",
+        "base_url": "${OLLAMA_BASE_URL}",
+        "temperature": 0.0
+      }
+    },
+    "people": {
+      "type": "csv",
+      "csv_path": "/app/data/people/people-100.csv",
+      "overview_path": "/app/data/people/overview.txt",
+      "specification_path": "/app/data/people/specs.yaml",
+      "llm": {
+        "type": "ollama",
+        "model": "gemma4:26b",
+        "base_url": "${OLLAMA_BASE_URL}",
+        "temperature": 0.0
+      }
+    }
+  }
+}
